@@ -1,17 +1,17 @@
-/* Reset default browser styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General page styles */
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-/* Header */
+
 header {
     background: #333;
     color: white;
@@ -24,7 +24,7 @@ header h1 {
     font-weight: bold;
 }
 
-/* Navigation */
+
 nav {
     background: black;
 }
@@ -42,7 +42,7 @@ nav ul li a {
     padding: 10px;
 }
 
-/* Main Layout */
+
 main {
     display: flex;
     min-height: 400px;
@@ -61,7 +61,7 @@ aside {
     padding: 20px;
 }
 
-/* Footer */
+
 footer {
     background: #333;
     color: white;
