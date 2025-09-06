@@ -3,10 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD131</title>
+    <meta name="discription" content="WDD 131 - Dynamic Web Fundamentals - Henry M. Ugochukwu,  to demonstrate my prerequisite knowledge by applying HTML and CSS in the design and development of a home page. ">
+    <meta name="author" content = "Henry Ugochukwu">
+    <title>WDD 131 - Dynamic Web Fundamentals- Henry M. Ugochukwu</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./week01/styles/base.css">
+    
+    <!-- Defer JavaScript -->
+    <script src="./week01/scripts/getdates.js" defer></script>
 </head>
 <body>
-    <li>WDD Henry Ugochukwu</li>
+    <header>
+        <h1>
+            <span id = "course-title">WDD 131 - Dynamic Web Fundamentals - Henry Ugochukwu </span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/ugochukwuhenry/" target="_blank">LinkedIn</a>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+                <li><a href="#" target="_blank">Final Project</a>
+                </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="left-column">
+        <section class="card">
+            <h2>About me</h2>
+            <img src="./week01/images/henrypassportnew.jpg" alt="Photo of Henry Ugochukwu">
+            <p>
+                Hello! My name is <strong>Henry Ugochukwu</strong>. I am passionate about helping
+                families thrive and creating equal opportunities for people through technology
+                and education. I recently earned my Bachelor's degree in Marriage and Family Studies
+                from BYU-Idaho and I am now pursuing my second degree in <strong>Software Development</strong>.
+            </p>
+
+            <p>
+                I chose software development because I believe technology is a powerful tool to
+                solve problems, connect people, and empower communities. My skills include
+                <em>digital marketing, social media strategy, research, data analysis, human resources,
+                    customer support, and web development</em>. Combining these with software development
+                allows me to create innovative solutions that impact lives positively.
+            </p>
+         <section class="card">
+            <h2> Uyo Akwa Ibom </h2>
+            <img src="./week01/images/uyo.jpg" alt="Picture of Uyo City">
+            <p>
+            Uyo is the capital city of Akwa Ibom State in Nigeria. It is known
+             for its vibrant culture, beautiful landscapes, and warm hospitality. 
+             The city has a mix of modern infrastructure and traditional charm, 
+             making it a unique place to visit and live.
+            </p>
+
+        </section>
+        </div>
+    
+        <aside class="right-column">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                <li><a href="https://placeholder.com/" target="_blank">Image Placeholder</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+  <p>
+    &copy; <span id="currentyear"></span> 
+    Henry Ugochukwu | Nigeria
+  </p>
+  <p id="lastModified"></p>
+</footer>
+
+
 </body>
 
 </html>
