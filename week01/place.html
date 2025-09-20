@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Akwa Ibom — Place Page</title>
+
+    <!-- Google Fonts (example) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Your existing CSS (do not change) -->
+    <link rel="stylesheet" href="/wdd131/week01/styles/place.css" media="screen">
+
+    <!-- Page script -->
+    <script src="/wdd131/week01/scripts/place.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>Akwa Ibom</h1>
+            <p class="subtitle">A place of culture, coastal beauty, and warm hospitality</p>
+        </header>
+
+        <!-- Hero: responsive images using srcset / picture & webp -->
+        <section class="hero">
+            <picture>
+                <!-- large desktop -->
+                <source srcset="images/akwa-ibom-1200.webp" media="(min-width:1024px)" type="image/webp">
+                <!-- tablet -->
+                <source srcset="images/akwa-ibom-768.webp" media="(min-width:600px)" type="image/webp">
+                <!-- fallback mobile -->
+                <img src="images/akwa-ibom-480.webp" alt="Scenic view of Akwa Ibom coastline" />
+            </picture>
+            <div class="hero-text">
+                <h2>Discover Akwa Ibom</h2>
+                <p>
+                    Akwa Ibom State is a coastal state in southern Nigeria known for its oil-rich lands,
+                    vibrant culture, colorful festivals, and delicious cuisine. The state capital is Uyo.
+                    It boasts beautiful beaches, friendly people, and a growing mix of modern development and
+                    traditional heritage.
+                </p>
+            </div>
+        </section>
+
+        <!-- Main layout: Data and Weather sections (two-column on wide screens) -->
+        <main class="main-layout" role="main" aria-labelledby="main-heading">
+            <h2 id="main-heading" class="visually-hidden">Main content</h2>
+
+            <!-- Data Section -->
+            <section class="data-section" aria-labelledby="data-heading">
+                <h3 id="data-heading">About Akwa Ibom</h3>
+
+                <div class="data-grid">
+                    <article class="data-item">
+                        <h4>Capital</h4>
+                        <p>Uyo</p>
+                    </article>
+
+                    <article class="data-item">
+                        <h4>Language</h4>
+                        <p>English (official), Ibibio, Annang, Oron</p>
+                    </article>
+
+                    <article class="data-item">
+                        <h4>Economy</h4>
+                        <p>Oil & gas, fishing, agriculture</p>
+                    </article>
+
+                    <article class="data-item">
+                        <h4>Cultural Note</h4>
+                        <p>Rich festivals, traditional music, and crafts</p>
+                    </article>
+                </div>
+
+                <div class="text-card">
+                    <h4>Why visit?</h4>
+                    <p>
+                        Visitors enjoy coastal scenery, local dishes like Edikang Ikong and Afang soup, and
+                        cultural events. It's an inviting place for anyone who appreciates warm weather and
+                        coastal life.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Weather Section -->
+            <aside class="weather-section" aria-labelledby="weather-heading">
+                <h3 id="weather-heading">Weather <span class="weather-large-emoji">⛅</span></h3>
+
+                <!-- Mobile: inline SVG icon (you can hide/show with CSS per breakpoint) -->
+                <div class="weather-icon-mobile" aria-hidden="true">
+                    <!-- Simple SVG cloud/rain icon (small, accessible) -->
+                    <svg width="48" height="48" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-labelledby="wtitle">
+                        <title id="wtitle">Cloud icon</title>
+                        <path fill="#cfe9ff" d="M20 44h28a8 8 0 0 0 0-16 12 12 0 0 0-23-4 10 10 0 0 0-5 20z" />
+                    </svg>
+                </div>
+
+                <div class="weather-grid">
+                    <div class="weather-item">
+                        <strong>Temperature:</strong>
+                        <div><span id="tempValue">28</span> °C</div>
+                    </div>
+
+                    <div class="weather-item">
+                        <strong>Wind Speed:</strong>
+                        <div><span id="windValue">12</span> km/h</div>
+                    </div>
+
+                    <div class="weather-item">
+                        <strong>Wind Chill:</strong>
+                        <div id="windChill">-</div>
+                    </div>
+                </div>
+
+                <p class="weather-note">Wind chill is computed only when applicable (≤ 10°C and wind &gt; 4.8 km/h).</p>
+            </aside>
+        </main>
+
+        <!-- DVD Features (horizontal on wide, stacked on mobile) -->
+        <section class="dvd-section">
+            <h3>Highlights</h3>
+            <ul class="dvd-features">
+                <li>Coastal scenery</li>
+                <li>Festivals & culture</li>
+                <li>Fresh seafood</li>
+                <li>Friendly communities</li>
+            </ul>
+        </section>
+
+        <!-- Footer with dynamic year and last modified -->
+        <footer class="footer">
+            <p>&copy; <span id="currentYear"></span> | Henry Ugochukwu | Akwa Ibom, Nigeria</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </footer>
+    </div>
+</body>
+
+</html>
