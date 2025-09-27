@@ -1,0 +1,75 @@
+/* temples-large.css - overrides for larger screens */
+@media screen and (min-width: 700px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    /* Hide hamburger on larger screens (CSS handles it) */
+    #hamburger {
+        display: none;
+    }
+
+    /* Show nav as horizontal flex row */
+    nav {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        width: auto;
+        margin-top: 0;
+        background: transparent;
+    }
+
+    nav a {
+        padding: 0.5rem 0.75rem;
+        font-weight: 500;
+    }
+
+    /* Larger page layout */
+    main {
+        max-width: 1000px;
+        margin: 1.5rem auto;
+        padding: 0 1rem;
+    }
+
+    main h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1.25rem;
+    }
+
+    /* Album grid on larger screen: 3 columns (keeping spacing) */
+    .album {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Give images a fixed height for uniform grid look */
+    figure img {
+        height: 160px;
+    }
+
+    figure {
+        padding: 0.8rem;
+    }
+
+    footer {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* optional: extra-large screens (4 columns) */
+@media screen and (min-width: 1200px) {
+    .album {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    figure img {
+        height: 140px;
+    }
+}

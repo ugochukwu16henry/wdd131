@@ -1,0 +1,142 @@
+/* temples.css - mobile first */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --purple: #3b0b53;
+    --purple-dark: #2e083f;
+    --accent: #00aaff;
+    --muted: #666;
+    --page-max: 1100px;
+}
+
+/* Page basics */
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background: #fff;
+}
+
+/* Header */
+header {
+    background: var(--purple);
+    color: #fff;
+    padding: 0.9rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+header h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+/* Hamburger button (mobile) */
+#hamburger {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.6rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem;
+}
+
+/* Navigation default (hidden on mobile) */
+nav {
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    background: transparent;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.25rem;
+    display: block;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+nav a:hover,
+nav a:focus {
+    background: rgba(255, 255, 255, 0.08);
+    outline: none;
+}
+
+/* When nav has .open, show it (JS toggles .open) */
+nav.open {
+    display: flex;
+}
+
+/* Main content wrapper */
+main {
+    max-width: var(--page-max);
+    margin: 1.25rem auto;
+    padding: 0 1rem;
+}
+
+/* Page heading */
+main h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: var(--purple-dark);
+}
+
+/* Album grid - mobile: 1 column */
+.album {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Figure card */
+figure {
+    background: #fbfbfb;
+    border: 1px solid #e6e6e6;
+    padding: 0.6rem;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* caption styling */
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* Footer */
+footer {
+    background: var(--purple);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
