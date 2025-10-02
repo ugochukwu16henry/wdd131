@@ -1,37 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Building Stronger Families — About</title>
     <link rel="stylesheet" href="/wdd131/Project/style/Project.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <meta name="description" content="About our mission to strengthen families and the resources we provide.">
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="logo">Building Stronger Families</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="about.html" class="active">About</a></li>
+        <nav class="site-nav container" role="navigation" aria-label="Main">
+            <div class="nav-left">
+                <a class="logo" href="index.html"><span class="site-name">Building Stronger Families</span></a>
+            </div>
+            <ul class="nav-right" role="menubar">
+                <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+                <li role="none"><a role="menuitem" href="resources.html">Resources</a></li>
+                <li role="none"><a role="menuitem" href="about.html" class="active">About</a></li>
+                <li role="none"><a role="button" href="#join" class="donate">Donate</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="about-page">
-        <div>
-            <h2>Our Mission</h2>
-            <p>We believe strong families are the foundation of a healthy society. This site provides tools, stories,
-                and activities to strengthen relationships and nurture love at home.</p>
-        </div>
-        <img src="family.jpg" alt="Happy family" loading="lazy">
-    </section>
+    <main class="container about-page" role="main">
+        <section class="about-text">
+            <h1>About Building Stronger Families</h1>
+            <p class="lead">Our mission is to support families with practical resources and inspiring stories that
+                strengthen love, resilience, and healthy routines.</p>
+
+            <h2>Who this site is for</h2>
+            <p style="font-size:1.05rem;">Parents, caregivers, and family members seeking practical tools to improve
+                communication, reduce conflict, and create meaningful family time.</p>
+
+            <h2>Contact & Join</h2>
+            <form id="contactForm" aria-label="Contact form">
+                <label for="c-name">Name</label>
+                <input id="c-name" name="name" type="text" required>
+
+                <label for="c-email">Email</label>
+                <input id="c-email" name="email" type="email" required>
+
+                <label for="c-message">Message</label>
+                <textarea id="c-message" name="message" rows="4"></textarea>
+
+                <button type="submit" class="cta-btn">Join Our Cause</button>
+                <div id="contactMsg" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+
+        <aside class="about-visual" aria-hidden="true">
+            <img src="about-visual.jpg" alt="Family image" loading="lazy" width="480" height="320">
+        </aside>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Building Stronger Families | <a href="references.html">References</a></p>
+        <div class="container footer-inner">
+            <p>© <span id="year3"></span> Building Stronger Families — <a href="references.html">References</a></p>
+        </div>
     </footer>
+
+    <script src="/wdd131/Project/scripts/app.js" defer></script>
 </body>
 
 </html>

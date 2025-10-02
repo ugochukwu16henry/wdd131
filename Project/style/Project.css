@@ -1,124 +1,259 @@
-/* ===== Reset ===== */
-* {
+/* ---------- Reset & Base Styles ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
+    background-color: #ECF0F1;
     color: #2C3E50;
-    background: #ECF0F1;
+    line-height: 1.6;
 }
 
-/* ===== Header / Nav ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0.5em;
+    color: #2C3E50;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button,
+.cta-btn,
+.btn-light {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* ---------- Header & Navigation ---------- */
 header {
     background: #2C3E50;
-    padding: 15px 20px;
+    padding: 1rem 0;
 }
 
-nav {
+.site-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    color: white;
-    font-weight: bold;
-    font-size: 1.4rem;
-    font-family: 'Montserrat', sans-serif;
+.nav-left .site-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
 }
 
-nav ul {
+.nav-right {
     list-style: none;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
+.nav-right a {
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
+.nav-right a:hover,
+.nav-right a.active {
     color: #E67E22;
 }
 
-/* ===== Hero ===== */
+.donate {
+    background: #E67E22;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.donate:hover {
+    background: #cf6512;
+}
+
+/* ---------- Hero Section ---------- */
 .hero {
-    text-align: center;
-    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 3rem 0;
 }
 
 .hero h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-weight: 700;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+.lead {
+    font-size: 1.1rem;
+    margin: 1rem 0;
 }
 
-button,
 .cta-btn {
-    padding: 12px 24px;
     background: #E67E22;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    margin-right: 0.5rem;
 }
 
-button:hover,
 .cta-btn:hover {
-    background: #cf650e;
+    background: #cf6512;
 }
 
-/* ===== Cards Section ===== */
-.cards {
+.btn-light {
+    background: #fff;
+    border: 1px solid #E67E22;
+    color: #E67E22;
+    padding: 0.7rem 1.5rem;
+}
+
+.btn-light:hover {
+    background: #fdf3eb;
+}
+
+/* ---------- Resource Highlights ---------- */
+.resources-preview {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 40px 20px;
+    margin: 3rem 0;
 }
 
 .card {
-    background: white;
-    padding: 20px;
+    background: #fff;
+    padding: 1.2rem;
     border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
+    color: #2C3E50;
 }
 
-/* ===== Resources Page ===== */
+/* ---------- Inspirational Stories ---------- */
+.stories h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.story-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.story-save {
+    margin-top: 0.5rem;
+    background: #E67E22;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.story-save:hover {
+    background: #cf6512;
+}
+
+/* ---------- Signup Form ---------- */
+.signup form {
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.signup input,
+.signup textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.signup fieldset {
+    border: none;
+    padding: 0;
+}
+
+.msg-success {
+    color: green;
+}
+
+.msg-error {
+    color: red;
+}
+
+/* ---------- Resources Page ---------- */
 .resources-page {
     display: grid;
     grid-template-columns: 250px 1fr;
-    gap: 30px;
-    padding: 40px 20px;
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
 .sidebar {
-    background: white;
-    padding: 20px;
+    background: #fff;
+    padding: 1rem;
     border-radius: 10px;
 }
 
-.sidebar input,
-.sidebar button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+.category-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.cat-btn {
+    display: block;
+    margin-bottom: 15px;
+    background: none;
+    border: none;
+    color: #2C3E50;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cat-btn:hover {
+    color: #E67E22;
 }
 
 .resource-grid {
@@ -127,28 +262,75 @@ button:hover,
     gap: 20px;
 }
 
-/* ===== About Page ===== */
+.resource-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resource-card h3 {
+    font-size: 1.1rem;
+}
+
+.resource-card .meta {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* ---------- About Page ---------- */
 .about-page {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 60px 20px;
+    gap: 2rem;
     align-items: center;
+    margin: 3rem 0;
 }
 
-.about-page img {
-    width: 100%;
-    border-radius: 10px;
+.about-text .lead {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
-/* ===== Footer ===== */
+.about-text button {
+    margin-top: 1rem;
+}
+
+/* ---------- Footer ---------- */
 footer {
     background: #2C3E50;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 1rem 0;
+    margin-top: 2rem;
 }
 
 footer a {
     color: #E67E22;
+    font-weight: 600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+
+    .hero,
+    .about-page {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .resources-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resources-page {
+        grid-template-columns: 1fr;
+    }
 }
