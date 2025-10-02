@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building Stronger Families - Resources</title>
+    <title>Family Resources</title>
     <link rel="stylesheet" href="/wdd131/Project/style/Project.css">
+    <script src="/wdd131/Project/scripts/app.js" defer></script>
 </head>
 
 <body>
     <header>
-        <nav class="container">
+        <nav>
             <div class="logo">Building Stronger Families</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -20,27 +21,27 @@
         </nav>
     </header>
 
-    <section class="hero container">
-        <h1>Family Resources</h1>
-        <p>Find practical tips, guides, and activities for building stronger families.</p>
-    </section>
+    <section class="resources-page">
+        <aside class="sidebar">
+            <h3>Search Resources</h3>
+            <input type="text" id="searchBox" placeholder="Type a keyword">
+            <button onclick="searchResources()">Search</button>
+        </aside>
 
-    <section class="section container">
-        <h2>Resource Categories</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Parenting Strategies</h3>
-                <p>Positive discipline and nurturing techniques to support child growth.</p>
-            </div>
-            <div class="card">
-                <h3>Healthy Routines</h3>
-                <p>Daily habits for creating balance and stability in your home.</p>
-            </div>
-            <div class="card">
-                <h3>Inspirational Stories</h3>
-                <p>Real-life stories of families overcoming challenges together.</p>
+        <div>
+            <h2>Resources</h2>
+            <div class="resource-grid" id="resourceList">
+                <!-- JS will populate -->
             </div>
         </div>
+    </section>
+
+    <section class="container">
+        <h3>Subscribe for Updates</h3>
+        <form id="subscribeForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
     </section>
 
     <footer>

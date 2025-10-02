@@ -6,51 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Building Stronger Families - Home</title>
     <link rel="stylesheet" href="/wdd131/Project/style/Project.css">
+    <script src="/wdd131/Project/scripts/app.js" defer></script>
 </head>
 
 <body>
     <header>
-        <nav class="container">
+        <nav>
             <div class="logo">Building Stronger Families</div>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero container">
+    <section class="hero">
         <h1>Building Stronger Families</h1>
         <p>Resources and tips to help families grow closer and face challenges together.</p>
-        <button onclick="location.href='resources.html'">Explore Resources</button>
+        <button onclick="highlightTip()">Get a Quick Tip</button>
+        <p id="tip"></p>
     </section>
 
-    <section class="section container">
-        <h2>Featured Topics</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Communication Skills</h3>
-                <p>Practical strategies for improving listening and expressing feelings in a healthy way.</p>
-                <a href="resources.html" class="btn">Learn More</a>
-            </div>
-            <div class="card">
-                <h3>Conflict Resolution</h3>
-                <p>Quick methods for handling disagreements peacefully and respectfully at home.</p>
-                <a href="resources.html" class="btn">Learn More</a>
-            </div>
-            <div class="card">
-                <h3>Family Bonding</h3>
-                <p>Fun activities and traditions that strengthen family relationships.</p>
-                <a href="resources.html" class="btn">Learn More</a>
-            </div>
+    <section class="cards">
+        <div class="card">
+            <h3>Communication Skills</h3>
+            <p>Strategies to connect better with your family members.</p>
+        </div>
+        <div class="card">
+            <h3>Conflict Resolution</h3>
+            <p>Learn to solve disagreements peacefully and respectfully.</p>
+        </div>
+        <div class="card">
+            <h3>Family Bonding</h3>
+            <p>Fun ideas to strengthen your family’s connection.</p>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Building Stronger Families | <a href="references.html">References</a></p>
     </footer>
-    <script src="/wdd131/Project/scripts/app.js" defer></script>
 </body>
 
 </html>
