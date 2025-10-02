@@ -1,0 +1,154 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #2C3E50;
+    background: #ECF0F1;
+}
+
+/* ===== Header / Nav ===== */
+header {
+    background: #2C3E50;
+    padding: 15px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #E67E22;
+}
+
+/* ===== Hero ===== */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+button,
+.cta-btn {
+    padding: 12px 24px;
+    background: #E67E22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover,
+.cta-btn:hover {
+    background: #cf650e;
+}
+
+/* ===== Cards Section ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+/* ===== Resources Page ===== */
+.resources-page {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.sidebar {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar input,
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* ===== About Page ===== */
+.about-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 60px 20px;
+    align-items: center;
+}
+
+.about-page img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #E67E22;
+}
