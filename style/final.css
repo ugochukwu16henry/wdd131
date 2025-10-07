@@ -334,3 +334,29 @@ footer a {
         grid-template-columns: 1fr;
     }
 }
+
+/* Mobile-first: Default styles for all screen sizes */
+.header {
+    font-size: 1.5rem;
+}
+
+/* For screens 768px wide and larger (tablets and up) */
+@media screen and (min-width: 768px) {
+    .header {
+        font-size: 2.5rem;
+        /* Increase font size */
+    }
+
+    .flex-container {
+        flex-direction: row;
+        /* Arrange items in a row */
+    }
+}
+
+/* For screens 1200px wide and larger (desktops) */
+@media screen and (min-width: 1200px) {
+    .header {
+        font-size: 3rem;
+        /* Increase font size further */
+    }
+}
