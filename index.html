@@ -1,116 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Building Stronger Families — Home</title>
-    <link rel="stylesheet" href="/wdd131/style/project.css">
-    <!-- Fonts per plan -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" content="WDD 131 - Dynamic Web Fundamentals - Henry M. Ugochukwu,  to demonstrate my prerequisite knowledge by applying HTML and CSS in the design and development of a home page. ">
+    <meta name="author" content = "Henry Ugochukwu">
+    <title>WDD 131 - Dynamic Web Fundamentals- Henry M. Ugochukwu</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap"
         rel="stylesheet">
-    <meta name="description" content="Resources and tips to help families grow closer and face challenges together.">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./week01/styles/base.css">
+    
+    <!-- Defer JavaScript -->
+    <script src="./week01/scripts/getdates.js" defer></script>
 </head>
-
 <body>
     <header>
-        <nav class="site-nav container" role="navigation" aria-label="Main">
-            <div class="nav-left">
-                <a class="logo" href="index.html" aria-label="Building Stronger Families home">
-                    <span class="site-name">Building Stronger Families</span>
-                </a>
-            </div>
-
-            <ul class="nav-right" role="menubar">
-                <li role="none"><a role="menuitem" href="index.html" class="active">Home</a></li>
-                <li role="none"><a role="menuitem" href="resources.html">Resources</a></li>
-                <li role="none"><a role="menuitem" href="about.html">About</a></li>
-                <li role="none"><a role="button" href="#signup" class="donate">Donate</a></li>
-            </ul>
+        <h1>
+            <span id = "course-title">WDD 131 - Dynamic Web Fundamentals - Henry Ugochukwu </span>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/ugochukwuhenry/" target="_blank">LinkedIn</a>
+                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+                <li><a href="#" target="_blank">Final Project</a>
+                </ul>
         </nav>
     </header>
-
     <main>
-        <!-- Hero: 2-column grid -->
-        <section class="hero container" aria-labelledby="hero-title">
-            <div class="hero-left">
-                <h1 id="hero-title">Building Stronger Families</h1>
-                <p class="lead">Resources and tips to help families grow closer and face challenges together.</p>
-                <div class="hero-actions">
-                    <a class="cta-btn" href="resources.html">Explore Resources</a>
-                    <button id="getTip" class="btn-light">Get a Quick Tip</button>
-                </div>
-                <p id="tipOutput" aria-live="polite" class="tip-output"></p>
-            </div>
+        <div class="left-column">
+        <section class="card">
+            <h2>About me</h2>
+            <img src="./week01/images/henrypassportnew.jpg" alt="Photo of Henry Ugochukwu">
+            <p>
+                Hello! My name is <strong>Henry Ugochukwu</strong>. I am passionate about helping
+                families thrive and creating equal opportunities for people through technology
+                and education. I recently earned my Bachelor's degree in Marriage and Family Studies
+                from BYU-Idaho and I am now pursuing my second degree in <strong>Software Development</strong>.
+            </p>
 
-            <div class="hero-right" aria-hidden="true">
-                <img src="hero-illustration.jpg" alt="Family together illustration" loading="lazy" width="640"
-                    height="400">
-            </div>
+            <p>
+                I chose software development because I believe technology is a powerful tool to
+                solve problems, connect people, and empower communities. My skills include
+                <em>digital marketing, social media strategy, research, data analysis, human resources,
+                    customer support, and web development</em>. Combining these with software development
+                allows me to create innovative solutions that impact lives positively.
+            </p>
+         <section class="card">
+            <h2> Uyo Akwa Ibom </h2>
+            <img src="./week01/images/uyo.jpg" alt="Picture of Uyo City">
+            <p>
+            Uyo is the capital city of Akwa Ibom State in Nigeria. It is known
+             for its vibrant culture, beautiful landscapes, and warm hospitality. 
+             The city has a mix of modern infrastructure and traditional charm, 
+             making it a unique place to visit and live..
+            </p>
+
         </section>
-
-        <!-- 3-column resource highlights -->
-        <section class="container resources-preview" aria-labelledby="features-title">
-            <h2 id="features-title" class="sr-only">Featured Topics</h2>
-            <article class="card">
-                <h3>Communication Skills</h3>
-                <p>Short exercises and conversation starters to build listening and speaking skills at home.</p>
-                <div class="card-media" aria-hidden="true"><img src="comm-thumb.jpg" alt="" loading="lazy" width="320"
-                        height="180"></div>
-            </article>
-
-            <article class="card">
-                <h3>Conflict Resolution</h3>
-                <p>Practical scripts and steps for resolving disagreements respectfully and constructively.</p>
-                <div class="card-media" aria-hidden="true"><img src="conflict-thumb.jpg" alt="" loading="lazy"
-                        width="320" height="180"></div>
-            </article>
-
-            <article class="card">
-                <h3>Family Bonding</h3>
-                <p>Activities and routines designed to create meaningful connection and joyful family time.</p>
-                <div class="card-media" aria-hidden="true"><img src="bonding-thumb.jpg" alt="" loading="lazy"
-                        width="320" height="180"></div>
-            </article>
-        </section>
-
-        <!-- Inspirational stories: 2-column -->
-        <section class="container stories" aria-labelledby="stories-title">
-            <h2 id="stories-title">Inspirational Stories</h2>
-            <div id="storiesGrid" class="stories-grid" aria-live="polite"></div>
-        </section>
-
-        <!-- Signup form (basic — stores to localStorage) -->
-        <section class="container signup" id="signup" aria-labelledby="signup-title">
-            <h2 id="signup-title">Join our newsletter</h2>
-            <form id="signupForm" novalidate>
-                <label for="s-name">Full name</label>
-                <input id="s-name" name="name" type="text" required>
-
-                <label for="s-email">Email</label>
-                <input id="s-email" name="email" type="email" required>
-
-                <fieldset>
-                    <legend>Interests</legend>
-                    <label><input type="checkbox" name="interest" value="communication"> Communication</label>
-                    <label><input type="checkbox" name="interest" value="parenting"> Parenting</label>
-                    <label><input type="checkbox" name="interest" value="activities"> Activities</label>
-                </fieldset>
-
-                <button type="submit" class="cta-btn">Sign up</button>
-                <div id="signupMessage" role="status" aria-live="polite"></div>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container footer-inner">
-            <p>© <span id="year"></span> Building Stronger Families — <a href="references.html">References</a></p>
         </div>
-    </footer>
+    
+        <aside class="right-column">
+            <h2>Web Dev Resources</h2>
+            <ul>
+                <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                <li><a href="https://placeholder.com/" target="_blank">Image Placeholder</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+  <p>
+    &copy; <span id="currentyear"></span> 
+    Henry Ugochukwu | Nigeria
+  </p>
+  <p id="lastModified"></p>
+</footer>
 
-    <script src="/wdd131/scripts/app.js" defer></script>
+
 </body>
 
 </html>
