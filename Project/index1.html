@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Building Stronger Families — Home</title>
+    <link rel="stylesheet" href="/wdd131/Project/style/Project.css">
+    <!-- Fonts per plan -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <meta name="description" content="Resources and tips to help families grow closer and face challenges together.">
+</head>
+
+<body>
+    <header>
+        <nav class="site-nav container" role="navigation" aria-label="Main">
+            <div class="nav-left">
+                <a class="logo" href="index.html" aria-label="Building Stronger Families home">
+                    <span class="site-name">Building Stronger Families</span>
+                </a>
+            </div>
+
+            <ul class="nav-right" role="menubar">
+                <li role="none"><a role="menuitem" href="index.html" class="active">Home</a></li>
+                <li role="none"><a role="menuitem" href="resources.html">Resources</a></li>
+                <li role="none"><a role="menuitem" href="about.html">About</a></li>
+                <li role="none"><a role="button" href="#signup" class="donate">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero: 2-column grid -->
+        <section class="hero container" aria-labelledby="hero-title">
+            <div class="hero-left">
+                <h1 id="hero-title">Building Stronger Families</h1>
+                <p class="lead">Resources and tips to help families grow closer and face challenges together.</p>
+                <div class="hero-actions">
+                    <a class="cta-btn" href="resources.html">Explore Resources</a>
+                    <button id="getTip" class="btn-light">Get a Quick Tip</button>
+                </div>
+                <p id="tipOutput" aria-live="polite" class="tip-output"></p>
+            </div>
+
+            <div class="hero-right" aria-hidden="true">
+                <img src="hero-illustration.jpg" alt="Family together illustration" loading="lazy" width="640"
+                    height="400">
+            </div>
+        </section>
+
+        <!-- 3-column resource highlights -->
+        <section class="container resources-preview" aria-labelledby="features-title">
+            <h2 id="features-title" class="sr-only">Featured Topics</h2>
+            <article class="card">
+                <h3>Communication Skills</h3>
+                <p>Short exercises and conversation starters to build listening and speaking skills at home.</p>
+                <div class="card-media" aria-hidden="true"><img src="comm-thumb.jpg" alt="" loading="lazy" width="320"
+                        height="180"></div>
+            </article>
+
+            <article class="card">
+                <h3>Conflict Resolution</h3>
+                <p>Practical scripts and steps for resolving disagreements respectfully and constructively.</p>
+                <div class="card-media" aria-hidden="true"><img src="conflict-thumb.jpg" alt="" loading="lazy"
+                        width="320" height="180"></div>
+            </article>
+
+            <article class="card">
+                <h3>Family Bonding</h3>
+                <p>Activities and routines designed to create meaningful connection and joyful family time.</p>
+                <div class="card-media" aria-hidden="true"><img src="bonding-thumb.jpg" alt="" loading="lazy"
+                        width="320" height="180"></div>
+            </article>
+        </section>
+
+        <!-- Inspirational stories: 2-column -->
+        <section class="container stories" aria-labelledby="stories-title">
+            <h2 id="stories-title">Inspirational Stories</h2>
+            <div id="storiesGrid" class="stories-grid" aria-live="polite"></div>
+        </section>
+
+        <!-- Signup form (basic — stores to localStorage) -->
+        <section class="container signup" id="signup" aria-labelledby="signup-title">
+            <h2 id="signup-title">Join our newsletter</h2>
+            <form id="signupForm" novalidate>
+                <label for="s-name">Full name</label>
+                <input id="s-name" name="name" type="text" required>
+
+                <label for="s-email">Email</label>
+                <input id="s-email" name="email" type="email" required>
+
+                <fieldset>
+                    <legend>Interests</legend>
+                    <label><input type="checkbox" name="interest" value="communication"> Communication</label>
+                    <label><input type="checkbox" name="interest" value="parenting"> Parenting</label>
+                    <label><input type="checkbox" name="interest" value="activities"> Activities</label>
+                </fieldset>
+
+                <button type="submit" class="cta-btn">Sign up</button>
+                <div id="signupMessage" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Building Stronger Families — <a href="references.html">References</a></p>
+        </div>
+    </footer>
+
+    <script src="/wdd131/Project/scripts/app.js" defer></script>
+</body>
+
+</html>

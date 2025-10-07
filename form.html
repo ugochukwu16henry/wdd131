@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="/wdd131/style/form.css">
+    <script defer src="/wdd131/scripts/form.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="/wdd131/Project/review.html" id="reviewForm">
+            <!-- Product Name -->
+            <label for="productName">Product Name:</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                <!-- Options will be populated with JavaScript -->
+            </select>
+
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <label><input type="radio" id="rate1" name="rating" value="1" required> 1 ☆</label>
+                <label><input type="radio" id="rate2" name="rating" value="2"> 2 ☆</label>
+                <label><input type="radio" id="rate3" name="rating" value="3"> 3 ☆</label>
+                <label><input type="radio" id="rate4" name="rating" value="4"> 4 ☆</label>
+                <label><input type="radio" id="rate5" name="rating" value="5"> 5 ☆</label>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <label for="installDate">Date of Installation:</label>
+            <input type="date" id="installDate" name="installDate" required>
+
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Useful Features (check all that apply)</legend>
+                <label><input type="checkbox" id="feature1" name="features" value="Durability"> Durability</label>
+                <label><input type="checkbox" id="feature2" name="features" value="Design"> Design</label>
+                <label><input type="checkbox" id="feature3" name="features" value="Performance"> Performance</label>
+                <label><input type="checkbox" id="feature4" name="features" value="Battery"> Battery</label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <label for="reviewText">Written Review (optional):</label>
+            <textarea id="reviewText" name="reviewText" rows="4"></textarea>
+
+            <!-- User Name -->
+            <label for="username">Your Name (optional):</label>
+            <input type="text" id="username" name="username">
+
+            <!-- Submit -->
+            <input type="submit" value="Submit Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 - Product Reviews | WDD 131</p>
+    </footer>
+</body>
+
+</html>
