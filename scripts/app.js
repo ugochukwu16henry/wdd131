@@ -292,3 +292,12 @@ document.addEventListener("keydown", (ev) => {
     if (btn) btn.click();
   }
 });
+
+
+// menu.js
+const menuBtn = document.querySelector('.mobile-menu-btn');
+const navMenu = document.querySelector('nav ul');
+
+menuBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
