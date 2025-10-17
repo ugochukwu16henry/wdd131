@@ -9,14 +9,12 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     /* light gray */
     color: #333;
     max-width: 100%;
     overflow-x: hidden;
-    /* Prevents horizontal scroll */
+    /* Prevent horizontal scroll */
 }
 
 /* =======================
@@ -56,6 +54,10 @@ nav ul {
     gap: 1rem;
 }
 
+nav li {
+    list-style: none;
+}
+
 nav a {
     color: white;
     padding: 10px 15px;
@@ -78,7 +80,7 @@ nav a:hover {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background: none;
     border: none;
     color: white;
@@ -206,84 +208,44 @@ footer p {
 }
 
 /* Mobile Screens */
-@media (max-width: 600px) {
-    header {
-        text-align: left;
-        padding: 1rem 0.5rem;
-    }
+@media (max-width: 768px) {
 
-    header h1 {
-        font-size: 1.2rem;
-    }
-
+    /* Show mobile menu button */
     .mobile-menu-btn {
         display: block;
     }
 
-    nav ul {
-        display: none;
+    nav {
         flex-direction: column;
         align-items: center;
-        background: #333;
-        padding: 1rem 0;
+        position: relative;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #333;
         border-radius: 8px;
+        display: none;
+        /* hidden by default */
+        padding: 1rem 0;
+        gap: 0.5rem;
     }
 
     nav ul.active {
         display: flex;
-    }
-
-    nav a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 0.75rem;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .left-column,
-    .right-column {
-        width: 100%;
-    }
-
-    footer {
-        font-size: 0.8rem;
-        padding: 1rem 0.5rem;
-    }
-}
-
-/* ----------------------------- */
-/* MOBILE RESPONSIVE DESIGN FIX  */
-/* ----------------------------- */
-
-@media (max-width: 768px) {
-
-    /* Make nav vertical and easy to tap */
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 0.5rem;
+        /* show when menu is toggled */
     }
 
     nav li {
-        width: 100%;
+        width: 90%;
         text-align: center;
     }
 
     nav a {
         display: block;
-        width: 90%;
+        width: 100%;
         background-color: #003366;
         color: white;
         border-radius: 6px;
@@ -293,10 +255,8 @@ footer p {
 
     nav a:hover {
         background-color: #004080;
-        text-decoration: underline;
     }
 
-    /* Adjust main content for one-column layout */
     main {
         display: block;
         padding: 1rem;
@@ -313,12 +273,19 @@ footer p {
     .right-column {
         margin-top: 1rem;
     }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
 }
 
+/* Extra Small Screens */
 @media (max-width: 480px) {
     header {
         font-size: 1rem;
         padding: 0.75rem;
+        text-align: left;
     }
 
     nav a {
@@ -327,7 +294,7 @@ footer p {
     }
 
     footer {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         padding: 0.75rem;
     }
 }
