@@ -1,4 +1,12 @@
-/* General Page Setup */
+/* =======================
+   General Page Setup
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
@@ -6,9 +14,14 @@ body {
     background-color: #f4f4f4;
     /* light gray */
     color: #333;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* Prevents horizontal scroll */
 }
 
-/* Header Section (Blue Banner) */
+/* =======================
+   Header Section
+======================= */
 header {
     background-color: #003366;
     /* dark blue */
@@ -16,6 +29,7 @@ header {
     padding: 1rem;
     text-align: center;
     font-weight: bold;
+    position: relative;
 }
 
 header span {
@@ -23,7 +37,9 @@ header span {
     /* highlight student name */
 }
 
-/* Navigation Bar */
+/* =======================
+   Navigation Bar
+======================= */
 nav {
     background-color: #333;
     display: flex;
@@ -54,7 +70,24 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* Main Content Layout */
+/* =======================
+   Mobile Menu Button
+======================= */
+.mobile-menu-btn {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* =======================
+   Main Content Layout
+======================= */
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -89,7 +122,9 @@ main {
     border-radius: 6px;
 }
 
-/* Right Column (Web Dev Resources) */
+/* =======================
+   Right Column (Resources)
+======================= */
 .right-column {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -127,7 +162,9 @@ main {
     color: #001f4d;
 }
 
-/* Footer Section */
+/* =======================
+   Footer Section
+======================= */
 footer {
     background-color: #003366;
     color: white;
@@ -138,4 +175,84 @@ footer {
 
 footer p {
     margin: 0.5rem 0;
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
+
+/* Tablet Screens */
+@media (max-width: 992px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        /* Stack columns */
+    }
+
+    .card img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .right-column {
+        margin-top: 1rem;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+    header {
+        text-align: left;
+        padding: 1rem 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: #333;
+        padding: 1rem 0;
+        border-radius: 8px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 1rem 0.5rem;
+    }
 }
