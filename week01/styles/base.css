@@ -81,7 +81,7 @@ nav a:hover {
     top: 1rem;
     right: 1rem;
     font-size: 1.8rem;
-    background: none;
+    background: rgb(15, 13, 13);
     border: none;
     color: white;
     cursor: pointer;
